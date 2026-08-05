@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0072)file:///C:/Users/ASUS/Downloads/platform_jadual_beban_bdj_bdg%20(1).html -->
+<!-- saved from url=(0062)file:///C:/Users/ASUS/Downloads/sistem_jadual_beban%20(2).html -->
 <html lang="ms"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +8,9 @@
     <meta http-equiv="Expires" content="0">
     <title>Platform Jadual Beban BDJ &amp; BDG</title>
     
-    <link href="./Platform Jadual Beban BDJ &amp; BDG_files/all.min.css" rel="stylesheet">
-    <script src="./Platform Jadual Beban BDJ &amp; BDG_files/saved_resource"></script>
-    <script src="./Platform Jadual Beban BDJ &amp; BDG_files/xlsx.full.min.js.download"></script>
+    <link href="file:///C:/Users/ASUS/Downloads/Platform%20Jadual%20Beban%20BDJ%20&amp;%20BDG_files/all.min.css" rel="stylesheet">
+    <script src="file:///C:/Users/ASUS/Downloads/Platform%20Jadual%20Beban%20BDJ%20&amp;%20BDG_files/saved_resource"></script>
+    <script src="file:///C:/Users/ASUS/Downloads/Platform%20Jadual%20Beban%20BDJ%20&amp;%20BDG_files/xlsx.full.min.js.download"></script>
 
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; }
@@ -110,7 +110,7 @@
                 <button onclick="switchTab(&#39;tab-subjek&#39;)" id="btn-tab-subjek" class="tab-btn hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm flex items-center border-transparent text-gray-500">
                     <i class="fas fa-book-open mr-2"></i> <span data-i18n="tab_subjek">1. Pengurusan Subjek</span>
                 </button>
-                <button onclick="switchTab(&#39;tab-agihan&#39;)" id="btn-tab-agihan" class="tab-btn hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm flex items-center border-indigo-500 text-indigo-600">
+                <button onclick="switchTab(&#39;tab-agihan&#39;)" id="btn-tab-agihan" class="tab-btn hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm flex items-center border-transparent text-gray-500">
                     <i class="fas fa-tasks mr-2"></i> <span data-i18n="tab_agihan">2. Agihan Tugas &amp; Beban</span>
                 </button>
                 <button onclick="switchTab(&#39;tab-pensyarah&#39;)" id="btn-tab-pensyarah" class="tab-btn hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm flex items-center border-transparent text-gray-500">
@@ -119,7 +119,7 @@
                 <button onclick="switchTab(&#39;tab-cetakan&#39;)" id="btn-tab-cetakan" class="tab-btn hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm flex items-center border-transparent text-gray-500">
                     <i class="fas fa-file-alt mr-2"></i> <span data-i18n="tab_laporan_subjek">4. Laporan Subjek</span>
                 </button>
-                <button onclick="switchTab(&#39;tab-laporan-staf&#39;)" id="btn-tab-laporan-staf" class="tab-btn hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm flex items-center border-transparent text-gray-500">
+                <button onclick="switchTab(&#39;tab-laporan-staf&#39;)" id="btn-tab-laporan-staf" class="tab-btn hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm flex items-center border-indigo-500 text-indigo-600">
                     <i class="fas fa-user-tie mr-2"></i> <span data-i18n="tab_laporan_staf">5. Laporan Pensyarah</span>
                 </button>
             </nav>
@@ -192,7 +192,7 @@
                         <td class="px-4 py-4 whitespace-nowrap text-center">
                             <div class="flex flex-col items-center justify-center">
                                 <input type="number" min="0" max="20" value="1" onchange="updateSubjectTarget(0, this.value)" class="w-16 text-center border-b-2 border-gray-300 focus:border-indigo-500 focus:outline-none text-lg font-bold text-gray-800 pb-1 bg-transparent">
-                                <span class="text-xs mt-1 text-green-600 font-bold">Diisi: 1 / 1</span>
+                                <span class="text-xs mt-1 text-red-600 font-bold">Diisi: 0 / 1</span>
                             </div>
                         </td>
                         <td class="admin-only px-4 py-4 whitespace-nowrap text-center no-print">
@@ -1107,7 +1107,7 @@
         <!-- ========================================== -->
         <!-- TAB 2: AGIHAN TUGAS -->
         <!-- ========================================== -->
-        <div id="tab-agihan" class="tab-content block">
+        <div id="tab-agihan" class="tab-content hidden">
             <div class="mb-4 flex flex-col md:flex-row md:justify-between md:items-center gap-4 no-print">
                 <div>
                     <h2 class="text-xl font-bold text-gray-800" data-i18n="t2_title">Agihan Pensyarah Mengikut Subjek</h2>
@@ -1118,13 +1118,13 @@
                 </button>
             </div>
             <div id="assignmentContainer" class="space-y-6">
-                    <div class="bg-white rounded-xl shadow-sm border border-green-400 border-l-4 overflow-hidden">
+                    <div class="bg-white rounded-xl shadow-sm border border-red-300 border-l-4 overflow-hidden">
                         <div class="bg-gray-50 px-5 py-3 border-b border-gray-200 flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
                             <div>
                                 <span class="px-2 py-0.5 rounded text-xs font-bold bg-indigo-100 text-indigo-700 mr-2">BDJ 12203</span>
                                 <span class="font-bold text-gray-800">Mathematics for Engineering Technology I</span>
                                 
-                                <span class="text-xs font-bold text-green-600 bg-green-100 px-2 py-1 rounded-md ml-2"><i class="fas fa-check-circle"></i> Lengkap</span>
+                                <span class="text-xs font-bold text-red-600 bg-red-100 px-2 py-1 rounded-md ml-2"><i class="fas fa-exclamation-triangle"></i> Kurang 1 Seksyen</span>
                             </div>
                             <div class="flex items-center gap-2 mt-2 md:mt-0">
                                 <span class="text-xs font-bold bg-indigo-50 text-indigo-700 px-2 py-1 rounded border border-indigo-100 shadow-sm">Beban Per Seksyen: 10</span>
@@ -1134,26 +1134,7 @@
                             </div>
                         </div>
                         <div class="p-4 space-y-3">
-                            
-                        <div class="flex flex-col sm:flex-row gap-3 items-center bg-gray-50 p-3 rounded-lg border border-gray-100">
-                            <div class="w-full sm:w-2/3">
-                                <select onchange="updateStaffAssignment(0, 0, &#39;staffId&#39;, this.value)" class="w-full border border-gray-300 rounded-md py-1.5 px-3 focus:ring-indigo-500 focus:border-indigo-500 text-sm bg-white font-medium">
-                                    <option value="">-- Pilih Staf --</option><optgroup label="⭐ Disyorkan (Pernah Ajar)"><option value="2">Dr. MOHD FIRDAUS BIN ABAS</option><option value="3">PN NOORZEHAN FAZAHIYAH BINTI MD SHAB</option></optgroup><optgroup label="Staf Aktif Lain"><option value="1">Dr. TAHA SADEQ</option><option value="4">Ts. Dr. SHAIFUL RIZAL BIN MASROL</option><option value="5">Ts. Dr. SITI AIDA BINTI IBRAHIM</option><option value="6">MOHAMED NASRUL BIN MOHAMED HATTA</option><option value="7">Dr. NURHAFIZZAH BINTI HASSAN</option><option value="8">PROF. MADYA Eur Ing. Ir. Ts. Dr. NORAZLIANIE BINTI SAZALI</option><option value="9">TS. DR. ZULIAZURA BINTI MOHD SALLEH</option><option value="10">Dr. MUSTAQIM BIN TUKIMAN</option><option value="11">TS. ASHARI BIN KASMIN</option><option value="12">PROF. MADYA Ts. Dr. NURHAYATI BINTI ROSLY</option><option value="13">PROF. MADYA Ts. Dr. NURUL FITRIAH BINTI NASIR</option><option value="14">TS. Dr. NORRIZAL BIN MUSTAFFA</option><option value="15">Ir. Ts. Dr. MOHAMAD FARID BIN SIES</option><option value="16">Ts. Dr. NURASYIKIN BINTI MISDAN</option><option value="17">Dr. RAIS HANIZAM BIN MADON</option><option value="18">DR. ADAM BIN KASANI</option><option value="19">Dr. AHMAD HAFIZAL BIN MOHD YAMIN</option><option value="20">Dr. MOHD MUSTAQIM BIN TUKIMAN</option></optgroup><optgroup label="Staf Rentas Jabatan (Cross-Dept)"><option value="21">ENCIK MUHARAM RAFIDI BIN JAAFAR [BDG]</option><option value="22">ENCIK SHAFAWI BIN ISMAIL [BDG]</option><option value="23">Ts. Dr. MOHD FAIZAL BIN ESA [BDG]</option><option value="24">ENCIK SYAMSUL AZRIN BIN KAMARUDDIN [BDG]</option><option value="25">PROF. MADYA Dr. MUHAMAD ZAINI BIN YUNOS [BDG]</option></optgroup>
-                                </select>
-                            </div>
-                            <div class="w-full sm:w-1/3 flex items-center gap-2 justify-end">
-                                <div class="flex items-center gap-1 bg-white border border-gray-300 rounded-md p-1 shadow-sm">
-                                    <span class="text-xs text-gray-500 ml-1 font-bold">Seksyen:</span>
-                                    <input type="number" min="1" max="15" value="1" onchange="updateStaffAssignment(0, 0, &#39;sections&#39;, this.value)" class="w-12 text-center focus:outline-none text-sm font-bold text-indigo-600">
-                                </div>
-                                <div class="flex items-center gap-1 bg-white border border-gray-300 rounded-md p-1 shadow-sm">
-                                    <span class="text-xs text-gray-500 ml-1">Kongsi ÷</span>
-                                    <input type="number" min="1" max="5" value="1" onchange="updateStaffAssignment(0, 0, &#39;share&#39;, this.value)" class="w-10 text-center focus:outline-none text-sm font-medium">
-                                </div>
-                                <button onclick="removeStaffRow(0, 0)" class="admin-only text-red-400 hover:text-red-600 p-1 bg-white rounded border border-gray-200 shadow-sm" title="Remove"><i class="fas fa-times"></i></button>
-                            </div>
-                        </div>
-                    
+                            <div class="text-center py-4 text-sm text-gray-400 italic">Belum ada agihan tugas</div>
                             
                     <div class="mt-3 pt-3 border-t border-gray-200 flex flex-col sm:flex-row justify-between sm:items-center gap-2">
                         <label class="text-sm font-bold text-gray-700 whitespace-nowrap"><i class="fas fa-user-tag text-indigo-500 mr-1"></i> Penyelaras Kursus:</label>
@@ -2229,7 +2210,526 @@
                         </tr>
                     </thead>
                     <tbody id="staffListBody" class="bg-white divide-y divide-gray-200">
-                    </tbody>
+                    <tr class="hover:bg-indigo-50 transition-colors">
+                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">1</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">-</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">Dr. TAHA SADEQ</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center"><span class="px-2 py-1 inline-flex text-xs leading-4 font-semibold rounded-full bg-green-100 text-green-800">Aktif</span></td>
+                        <td class="px-4 py-4 whitespace-normal text-sm"><span class="text-gray-400">-</span></td>
+                        <td class="px-6 py-4 text-sm text-gray-600 max-w-sm truncate" title="Computer Programming, Electrical and Electronics Technology">Computer Programming, Electrical and Electronics Technology</td>
+                        <td class="px-4 py-4 whitespace-normal align-top">
+                            <div class="flex flex-col items-center">
+                                <span class="px-3 py-1 inline-flex text-sm leading-5 font-bold rounded-full border bg-gray-100 text-gray-800 border-gray-200 mb-1 shadow-sm">
+                                    Jumlah: 0 Beban
+                                </span>
+                                <span class="px-3 py-1 inline-flex text-xs leading-4 font-bold rounded-full bg-indigo-100 text-indigo-800 border border-indigo-200 shadow-sm mb-1">
+                                    <i class="far fa-clock mr-1 mt-0.5"></i> 0.0 Jam Pertemuan / Mg
+                                </span>
+                                <div class="w-full min-w-[220px]">
+                                    <div class="text-xs text-gray-400 mt-2 italic text-center">Belum ada agihan tugas</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center admin-col hidden">
+                            <button onclick="openStaffModal(1)" class="text-indigo-600 hover:text-indigo-900 mx-1" title="Edit"><i class="fas fa-edit"></i></button>
+                            <button onclick="deleteStaff(1)" class="text-red-600 hover:text-red-900 mx-1" title="Delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                
+                    <tr class="hover:bg-indigo-50 transition-colors">
+                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">2</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">-</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">Dr. MOHD FIRDAUS BIN ABAS</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center"><span class="px-2 py-1 inline-flex text-xs leading-4 font-semibold rounded-full bg-green-100 text-green-800">Aktif</span></td>
+                        <td class="px-4 py-4 whitespace-normal text-sm"><span class="text-gray-400">-</span></td>
+                        <td class="px-6 py-4 text-sm text-gray-600 max-w-sm truncate" title="Mathematics for Engineering Technology I, Plant Eng Tech Practice I, Process Control and Instrumentation">Mathematics for Engineering Technology I, Plant Eng Tech Practice I, Process Control and Instrumentation</td>
+                        <td class="px-4 py-4 whitespace-normal align-top">
+                            <div class="flex flex-col items-center">
+                                <span class="px-3 py-1 inline-flex text-sm leading-5 font-bold rounded-full border bg-gray-100 text-gray-800 border-gray-200 mb-1 shadow-sm">
+                                    Jumlah: 0 Beban
+                                </span>
+                                <span class="px-3 py-1 inline-flex text-xs leading-4 font-bold rounded-full bg-indigo-100 text-indigo-800 border border-indigo-200 shadow-sm mb-1">
+                                    <i class="far fa-clock mr-1 mt-0.5"></i> 0.0 Jam Pertemuan / Mg
+                                </span>
+                                <div class="w-full min-w-[220px]">
+                                    <div class="text-xs text-gray-400 mt-2 italic text-center">Belum ada agihan tugas</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center admin-col hidden">
+                            <button onclick="openStaffModal(2)" class="text-indigo-600 hover:text-indigo-900 mx-1" title="Edit"><i class="fas fa-edit"></i></button>
+                            <button onclick="deleteStaff(2)" class="text-red-600 hover:text-red-900 mx-1" title="Delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                
+                    <tr class="hover:bg-indigo-50 transition-colors">
+                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">3</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">-</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">PN NOORZEHAN FAZAHIYAH BINTI MD SHAB</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center"><span class="px-2 py-1 inline-flex text-xs leading-4 font-semibold rounded-full bg-green-100 text-green-800">Aktif</span></td>
+                        <td class="px-4 py-4 whitespace-normal text-sm"><span class="text-gray-400">-</span></td>
+                        <td class="px-6 py-4 text-sm text-gray-600 max-w-sm truncate" title="Mathematics for Engineering Technology II">Mathematics for Engineering Technology II</td>
+                        <td class="px-4 py-4 whitespace-normal align-top">
+                            <div class="flex flex-col items-center">
+                                <span class="px-3 py-1 inline-flex text-sm leading-5 font-bold rounded-full border bg-gray-100 text-gray-800 border-gray-200 mb-1 shadow-sm">
+                                    Jumlah: 0 Beban
+                                </span>
+                                <span class="px-3 py-1 inline-flex text-xs leading-4 font-bold rounded-full bg-indigo-100 text-indigo-800 border border-indigo-200 shadow-sm mb-1">
+                                    <i class="far fa-clock mr-1 mt-0.5"></i> 0.0 Jam Pertemuan / Mg
+                                </span>
+                                <div class="w-full min-w-[220px]">
+                                    <div class="text-xs text-gray-400 mt-2 italic text-center">Belum ada agihan tugas</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center admin-col hidden">
+                            <button onclick="openStaffModal(3)" class="text-indigo-600 hover:text-indigo-900 mx-1" title="Edit"><i class="fas fa-edit"></i></button>
+                            <button onclick="deleteStaff(3)" class="text-red-600 hover:text-red-900 mx-1" title="Delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                
+                    <tr class="hover:bg-indigo-50 transition-colors">
+                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">4</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">-</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">Ts. Dr. SHAIFUL RIZAL BIN MASROL</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center"><span class="px-2 py-1 inline-flex text-xs leading-4 font-semibold rounded-full bg-green-100 text-green-800">Aktif</span></td>
+                        <td class="px-4 py-4 whitespace-normal text-sm"><span class="text-gray-400">-</span></td>
+                        <td class="px-6 py-4 text-sm text-gray-600 max-w-sm truncate" title="Engineering Drawing and CAD, Process Safety Engineering">Engineering Drawing and CAD, Process Safety Engineering</td>
+                        <td class="px-4 py-4 whitespace-normal align-top">
+                            <div class="flex flex-col items-center">
+                                <span class="px-3 py-1 inline-flex text-sm leading-5 font-bold rounded-full border bg-gray-100 text-gray-800 border-gray-200 mb-1 shadow-sm">
+                                    Jumlah: 0 Beban
+                                </span>
+                                <span class="px-3 py-1 inline-flex text-xs leading-4 font-bold rounded-full bg-indigo-100 text-indigo-800 border border-indigo-200 shadow-sm mb-1">
+                                    <i class="far fa-clock mr-1 mt-0.5"></i> 0.0 Jam Pertemuan / Mg
+                                </span>
+                                <div class="w-full min-w-[220px]">
+                                    <div class="text-xs text-gray-400 mt-2 italic text-center">Belum ada agihan tugas</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center admin-col hidden">
+                            <button onclick="openStaffModal(4)" class="text-indigo-600 hover:text-indigo-900 mx-1" title="Edit"><i class="fas fa-edit"></i></button>
+                            <button onclick="deleteStaff(4)" class="text-red-600 hover:text-red-900 mx-1" title="Delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                
+                    <tr class="hover:bg-indigo-50 transition-colors">
+                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">5</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">-</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">Ts. Dr. SITI AIDA BINTI IBRAHIM</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center"><span class="px-2 py-1 inline-flex text-xs leading-4 font-semibold rounded-full bg-green-100 text-green-800">Aktif</span></td>
+                        <td class="px-4 py-4 whitespace-normal text-sm"><span class="text-gray-400">-</span></td>
+                        <td class="px-6 py-4 text-sm text-gray-600 max-w-sm truncate" title="Creativity &amp; Innovation, Engineering Technology Practice II, Plant Fabrication Technology">Creativity &amp; Innovation, Engineering Technology Practice II, Plant Fabrication Technology</td>
+                        <td class="px-4 py-4 whitespace-normal align-top">
+                            <div class="flex flex-col items-center">
+                                <span class="px-3 py-1 inline-flex text-sm leading-5 font-bold rounded-full border bg-gray-100 text-gray-800 border-gray-200 mb-1 shadow-sm">
+                                    Jumlah: 0 Beban
+                                </span>
+                                <span class="px-3 py-1 inline-flex text-xs leading-4 font-bold rounded-full bg-indigo-100 text-indigo-800 border border-indigo-200 shadow-sm mb-1">
+                                    <i class="far fa-clock mr-1 mt-0.5"></i> 0.0 Jam Pertemuan / Mg
+                                </span>
+                                <div class="w-full min-w-[220px]">
+                                    <div class="text-xs text-gray-400 mt-2 italic text-center">Belum ada agihan tugas</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center admin-col hidden">
+                            <button onclick="openStaffModal(5)" class="text-indigo-600 hover:text-indigo-900 mx-1" title="Edit"><i class="fas fa-edit"></i></button>
+                            <button onclick="deleteStaff(5)" class="text-red-600 hover:text-red-900 mx-1" title="Delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                
+                    <tr class="hover:bg-indigo-50 transition-colors">
+                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">6</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">-</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">MOHAMED NASRUL BIN MOHAMED HATTA</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center"><span class="px-2 py-1 inline-flex text-xs leading-4 font-semibold rounded-full bg-green-100 text-green-800">Aktif</span></td>
+                        <td class="px-4 py-4 whitespace-normal text-sm"><span class="text-gray-400">-</span></td>
+                        <td class="px-6 py-4 text-sm text-gray-600 max-w-sm truncate" title="Material Science">Material Science</td>
+                        <td class="px-4 py-4 whitespace-normal align-top">
+                            <div class="flex flex-col items-center">
+                                <span class="px-3 py-1 inline-flex text-sm leading-5 font-bold rounded-full border bg-gray-100 text-gray-800 border-gray-200 mb-1 shadow-sm">
+                                    Jumlah: 0 Beban
+                                </span>
+                                <span class="px-3 py-1 inline-flex text-xs leading-4 font-bold rounded-full bg-indigo-100 text-indigo-800 border border-indigo-200 shadow-sm mb-1">
+                                    <i class="far fa-clock mr-1 mt-0.5"></i> 0.0 Jam Pertemuan / Mg
+                                </span>
+                                <div class="w-full min-w-[220px]">
+                                    <div class="text-xs text-gray-400 mt-2 italic text-center">Belum ada agihan tugas</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center admin-col hidden">
+                            <button onclick="openStaffModal(6)" class="text-indigo-600 hover:text-indigo-900 mx-1" title="Edit"><i class="fas fa-edit"></i></button>
+                            <button onclick="deleteStaff(6)" class="text-red-600 hover:text-red-900 mx-1" title="Delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                
+                    <tr class="hover:bg-indigo-50 transition-colors">
+                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">7</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">-</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">Dr. NURHAFIZZAH BINTI HASSAN</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center"><span class="px-2 py-1 inline-flex text-xs leading-4 font-semibold rounded-full bg-green-100 text-green-800">Aktif</span></td>
+                        <td class="px-4 py-4 whitespace-normal text-sm"><span class="text-gray-400">-</span></td>
+                        <td class="px-6 py-4 text-sm text-gray-600 max-w-sm truncate" title="Dynamics">Dynamics</td>
+                        <td class="px-4 py-4 whitespace-normal align-top">
+                            <div class="flex flex-col items-center">
+                                <span class="px-3 py-1 inline-flex text-sm leading-5 font-bold rounded-full border bg-gray-100 text-gray-800 border-gray-200 mb-1 shadow-sm">
+                                    Jumlah: 0 Beban
+                                </span>
+                                <span class="px-3 py-1 inline-flex text-xs leading-4 font-bold rounded-full bg-indigo-100 text-indigo-800 border border-indigo-200 shadow-sm mb-1">
+                                    <i class="far fa-clock mr-1 mt-0.5"></i> 0.0 Jam Pertemuan / Mg
+                                </span>
+                                <div class="w-full min-w-[220px]">
+                                    <div class="text-xs text-gray-400 mt-2 italic text-center">Belum ada agihan tugas</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center admin-col hidden">
+                            <button onclick="openStaffModal(7)" class="text-indigo-600 hover:text-indigo-900 mx-1" title="Edit"><i class="fas fa-edit"></i></button>
+                            <button onclick="deleteStaff(7)" class="text-red-600 hover:text-red-900 mx-1" title="Delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                
+                    <tr class="hover:bg-indigo-50 transition-colors">
+                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">8</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">-</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">PROF. MADYA Eur Ing. Ir. Ts. Dr. NORAZLIANIE BINTI SAZALI</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center"><span class="px-2 py-1 inline-flex text-xs leading-4 font-semibold rounded-full bg-green-100 text-green-800">Aktif</span></td>
+                        <td class="px-4 py-4 whitespace-normal text-sm"><span class="text-gray-400">-</span></td>
+                        <td class="px-6 py-4 text-sm text-gray-600 max-w-sm truncate" title="Engineering Technologist And Society, Management and Professional Ethics">Engineering Technologist And Society, Management and Professional Ethics</td>
+                        <td class="px-4 py-4 whitespace-normal align-top">
+                            <div class="flex flex-col items-center">
+                                <span class="px-3 py-1 inline-flex text-sm leading-5 font-bold rounded-full border bg-gray-100 text-gray-800 border-gray-200 mb-1 shadow-sm">
+                                    Jumlah: 0 Beban
+                                </span>
+                                <span class="px-3 py-1 inline-flex text-xs leading-4 font-bold rounded-full bg-indigo-100 text-indigo-800 border border-indigo-200 shadow-sm mb-1">
+                                    <i class="far fa-clock mr-1 mt-0.5"></i> 0.0 Jam Pertemuan / Mg
+                                </span>
+                                <div class="w-full min-w-[220px]">
+                                    <div class="text-xs text-gray-400 mt-2 italic text-center">Belum ada agihan tugas</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center admin-col hidden">
+                            <button onclick="openStaffModal(8)" class="text-indigo-600 hover:text-indigo-900 mx-1" title="Edit"><i class="fas fa-edit"></i></button>
+                            <button onclick="deleteStaff(8)" class="text-red-600 hover:text-red-900 mx-1" title="Delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                
+                    <tr class="hover:bg-indigo-50 transition-colors">
+                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">9</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">-</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">TS. DR. ZULIAZURA BINTI MOHD SALLEH</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center"><span class="px-2 py-1 inline-flex text-xs leading-4 font-semibold rounded-full bg-green-100 text-green-800">Aktif</span></td>
+                        <td class="px-4 py-4 whitespace-normal text-sm"><span class="text-gray-400">-</span></td>
+                        <td class="px-6 py-4 text-sm text-gray-600 max-w-sm truncate" title="Engineering Laboratory III">Engineering Laboratory III</td>
+                        <td class="px-4 py-4 whitespace-normal align-top">
+                            <div class="flex flex-col items-center">
+                                <span class="px-3 py-1 inline-flex text-sm leading-5 font-bold rounded-full border bg-gray-100 text-gray-800 border-gray-200 mb-1 shadow-sm">
+                                    Jumlah: 0 Beban
+                                </span>
+                                <span class="px-3 py-1 inline-flex text-xs leading-4 font-bold rounded-full bg-indigo-100 text-indigo-800 border border-indigo-200 shadow-sm mb-1">
+                                    <i class="far fa-clock mr-1 mt-0.5"></i> 0.0 Jam Pertemuan / Mg
+                                </span>
+                                <div class="w-full min-w-[220px]">
+                                    <div class="text-xs text-gray-400 mt-2 italic text-center">Belum ada agihan tugas</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center admin-col hidden">
+                            <button onclick="openStaffModal(9)" class="text-indigo-600 hover:text-indigo-900 mx-1" title="Edit"><i class="fas fa-edit"></i></button>
+                            <button onclick="deleteStaff(9)" class="text-red-600 hover:text-red-900 mx-1" title="Delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                
+                    <tr class="hover:bg-indigo-50 transition-colors">
+                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">10</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">-</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">Dr. MUSTAQIM BIN TUKIMAN</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center"><span class="px-2 py-1 inline-flex text-xs leading-4 font-semibold rounded-full bg-green-100 text-green-800">Aktif</span></td>
+                        <td class="px-4 py-4 whitespace-normal text-sm"><span class="text-gray-400">-</span></td>
+                        <td class="px-6 py-4 text-sm text-gray-600 max-w-sm truncate" title="Solid Mechanics, Bachelor Degree Project I, Bachelor Degree Project II">Solid Mechanics, Bachelor Degree Project I, Bachelor Degree Project II</td>
+                        <td class="px-4 py-4 whitespace-normal align-top">
+                            <div class="flex flex-col items-center">
+                                <span class="px-3 py-1 inline-flex text-sm leading-5 font-bold rounded-full border bg-gray-100 text-gray-800 border-gray-200 mb-1 shadow-sm">
+                                    Jumlah: 0 Beban
+                                </span>
+                                <span class="px-3 py-1 inline-flex text-xs leading-4 font-bold rounded-full bg-indigo-100 text-indigo-800 border border-indigo-200 shadow-sm mb-1">
+                                    <i class="far fa-clock mr-1 mt-0.5"></i> 0.0 Jam Pertemuan / Mg
+                                </span>
+                                <div class="w-full min-w-[220px]">
+                                    <div class="text-xs text-gray-400 mt-2 italic text-center">Belum ada agihan tugas</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center admin-col hidden">
+                            <button onclick="openStaffModal(10)" class="text-indigo-600 hover:text-indigo-900 mx-1" title="Edit"><i class="fas fa-edit"></i></button>
+                            <button onclick="deleteStaff(10)" class="text-red-600 hover:text-red-900 mx-1" title="Delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                
+                    <tr class="hover:bg-indigo-50 transition-colors">
+                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">11</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">-</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">TS. ASHARI BIN KASMIN</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center"><span class="px-2 py-1 inline-flex text-xs leading-4 font-semibold rounded-full bg-green-100 text-green-800">Aktif</span></td>
+                        <td class="px-4 py-4 whitespace-normal text-sm"><span class="text-gray-400">-</span></td>
+                        <td class="px-6 py-4 text-sm text-gray-600 max-w-sm truncate" title="Engineering Laboratory I, Mechanical Engineering Design">Engineering Laboratory I, Mechanical Engineering Design</td>
+                        <td class="px-4 py-4 whitespace-normal align-top">
+                            <div class="flex flex-col items-center">
+                                <span class="px-3 py-1 inline-flex text-sm leading-5 font-bold rounded-full border bg-gray-100 text-gray-800 border-gray-200 mb-1 shadow-sm">
+                                    Jumlah: 0 Beban
+                                </span>
+                                <span class="px-3 py-1 inline-flex text-xs leading-4 font-bold rounded-full bg-indigo-100 text-indigo-800 border border-indigo-200 shadow-sm mb-1">
+                                    <i class="far fa-clock mr-1 mt-0.5"></i> 0.0 Jam Pertemuan / Mg
+                                </span>
+                                <div class="w-full min-w-[220px]">
+                                    <div class="text-xs text-gray-400 mt-2 italic text-center">Belum ada agihan tugas</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center admin-col hidden">
+                            <button onclick="openStaffModal(11)" class="text-indigo-600 hover:text-indigo-900 mx-1" title="Edit"><i class="fas fa-edit"></i></button>
+                            <button onclick="deleteStaff(11)" class="text-red-600 hover:text-red-900 mx-1" title="Delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                
+                    <tr class="hover:bg-indigo-50 transition-colors">
+                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">12</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">-</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">PROF. MADYA Ts. Dr. NURHAYATI BINTI ROSLY</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center"><span class="px-2 py-1 inline-flex text-xs leading-4 font-semibold rounded-full bg-green-100 text-green-800">Aktif</span></td>
+                        <td class="px-4 py-4 whitespace-normal text-sm"><span class="text-gray-400">-</span></td>
+                        <td class="px-6 py-4 text-sm text-gray-600 max-w-sm truncate" title="Solid Modeling">Solid Modeling</td>
+                        <td class="px-4 py-4 whitespace-normal align-top">
+                            <div class="flex flex-col items-center">
+                                <span class="px-3 py-1 inline-flex text-sm leading-5 font-bold rounded-full border bg-gray-100 text-gray-800 border-gray-200 mb-1 shadow-sm">
+                                    Jumlah: 0 Beban
+                                </span>
+                                <span class="px-3 py-1 inline-flex text-xs leading-4 font-bold rounded-full bg-indigo-100 text-indigo-800 border border-indigo-200 shadow-sm mb-1">
+                                    <i class="far fa-clock mr-1 mt-0.5"></i> 0.0 Jam Pertemuan / Mg
+                                </span>
+                                <div class="w-full min-w-[220px]">
+                                    <div class="text-xs text-gray-400 mt-2 italic text-center">Belum ada agihan tugas</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center admin-col hidden">
+                            <button onclick="openStaffModal(12)" class="text-indigo-600 hover:text-indigo-900 mx-1" title="Edit"><i class="fas fa-edit"></i></button>
+                            <button onclick="deleteStaff(12)" class="text-red-600 hover:text-red-900 mx-1" title="Delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                
+                    <tr class="hover:bg-indigo-50 transition-colors">
+                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">13</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">-</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">PROF. MADYA Ts. Dr. NURUL FITRIAH BINTI NASIR</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center"><span class="px-2 py-1 inline-flex text-xs leading-4 font-semibold rounded-full bg-green-100 text-green-800">Aktif</span></td>
+                        <td class="px-4 py-4 whitespace-normal text-sm"><span class="text-gray-400">-</span></td>
+                        <td class="px-6 py-4 text-sm text-gray-600 max-w-sm truncate" title="Occupational Safety &amp; Health">Occupational Safety &amp; Health</td>
+                        <td class="px-4 py-4 whitespace-normal align-top">
+                            <div class="flex flex-col items-center">
+                                <span class="px-3 py-1 inline-flex text-sm leading-5 font-bold rounded-full border bg-gray-100 text-gray-800 border-gray-200 mb-1 shadow-sm">
+                                    Jumlah: 0 Beban
+                                </span>
+                                <span class="px-3 py-1 inline-flex text-xs leading-4 font-bold rounded-full bg-indigo-100 text-indigo-800 border border-indigo-200 shadow-sm mb-1">
+                                    <i class="far fa-clock mr-1 mt-0.5"></i> 0.0 Jam Pertemuan / Mg
+                                </span>
+                                <div class="w-full min-w-[220px]">
+                                    <div class="text-xs text-gray-400 mt-2 italic text-center">Belum ada agihan tugas</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center admin-col hidden">
+                            <button onclick="openStaffModal(13)" class="text-indigo-600 hover:text-indigo-900 mx-1" title="Edit"><i class="fas fa-edit"></i></button>
+                            <button onclick="deleteStaff(13)" class="text-red-600 hover:text-red-900 mx-1" title="Delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                
+                    <tr class="hover:bg-indigo-50 transition-colors">
+                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">14</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">-</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">TS. Dr. NORRIZAL BIN MUSTAFFA</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center"><span class="px-2 py-1 inline-flex text-xs leading-4 font-semibold rounded-full bg-green-100 text-green-800">Aktif</span></td>
+                        <td class="px-4 py-4 whitespace-normal text-sm"><span class="text-gray-400">-</span></td>
+                        <td class="px-6 py-4 text-sm text-gray-600 max-w-sm truncate" title="Plant Eng Tech Practice I, Heat Transfer, Plant Operation and Maintenance">Plant Eng Tech Practice I, Heat Transfer, Plant Operation and Maintenance</td>
+                        <td class="px-4 py-4 whitespace-normal align-top">
+                            <div class="flex flex-col items-center">
+                                <span class="px-3 py-1 inline-flex text-sm leading-5 font-bold rounded-full border bg-gray-100 text-gray-800 border-gray-200 mb-1 shadow-sm">
+                                    Jumlah: 0 Beban
+                                </span>
+                                <span class="px-3 py-1 inline-flex text-xs leading-4 font-bold rounded-full bg-indigo-100 text-indigo-800 border border-indigo-200 shadow-sm mb-1">
+                                    <i class="far fa-clock mr-1 mt-0.5"></i> 0.0 Jam Pertemuan / Mg
+                                </span>
+                                <div class="w-full min-w-[220px]">
+                                    <div class="text-xs text-gray-400 mt-2 italic text-center">Belum ada agihan tugas</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center admin-col hidden">
+                            <button onclick="openStaffModal(14)" class="text-indigo-600 hover:text-indigo-900 mx-1" title="Edit"><i class="fas fa-edit"></i></button>
+                            <button onclick="deleteStaff(14)" class="text-red-600 hover:text-red-900 mx-1" title="Delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                
+                    <tr class="hover:bg-indigo-50 transition-colors">
+                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">15</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">-</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">Ir. Ts. Dr. MOHAMAD FARID BIN SIES</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center"><span class="px-2 py-1 inline-flex text-xs leading-4 font-semibold rounded-full bg-green-100 text-green-800">Aktif</span></td>
+                        <td class="px-4 py-4 whitespace-normal text-sm"><span class="text-gray-400">-</span></td>
+                        <td class="px-6 py-4 text-sm text-gray-600 max-w-sm truncate" title="Engineering Laboratory III, Heat Ventilation and Air Conditioning">Engineering Laboratory III, Heat Ventilation and Air Conditioning</td>
+                        <td class="px-4 py-4 whitespace-normal align-top">
+                            <div class="flex flex-col items-center">
+                                <span class="px-3 py-1 inline-flex text-sm leading-5 font-bold rounded-full border bg-gray-100 text-gray-800 border-gray-200 mb-1 shadow-sm">
+                                    Jumlah: 0 Beban
+                                </span>
+                                <span class="px-3 py-1 inline-flex text-xs leading-4 font-bold rounded-full bg-indigo-100 text-indigo-800 border border-indigo-200 shadow-sm mb-1">
+                                    <i class="far fa-clock mr-1 mt-0.5"></i> 0.0 Jam Pertemuan / Mg
+                                </span>
+                                <div class="w-full min-w-[220px]">
+                                    <div class="text-xs text-gray-400 mt-2 italic text-center">Belum ada agihan tugas</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center admin-col hidden">
+                            <button onclick="openStaffModal(15)" class="text-indigo-600 hover:text-indigo-900 mx-1" title="Edit"><i class="fas fa-edit"></i></button>
+                            <button onclick="deleteStaff(15)" class="text-red-600 hover:text-red-900 mx-1" title="Delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                
+                    <tr class="hover:bg-indigo-50 transition-colors">
+                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">16</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">-</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">Ts. Dr. NURASYIKIN BINTI MISDAN</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center"><span class="px-2 py-1 inline-flex text-xs leading-4 font-semibold rounded-full bg-green-100 text-green-800">Aktif</span></td>
+                        <td class="px-4 py-4 whitespace-normal text-sm"><span class="text-gray-400">-</span></td>
+                        <td class="px-6 py-4 text-sm text-gray-600 max-w-sm truncate" title="Process Technology, Mechanics of Machine">Process Technology, Mechanics of Machine</td>
+                        <td class="px-4 py-4 whitespace-normal align-top">
+                            <div class="flex flex-col items-center">
+                                <span class="px-3 py-1 inline-flex text-sm leading-5 font-bold rounded-full border bg-gray-100 text-gray-800 border-gray-200 mb-1 shadow-sm">
+                                    Jumlah: 0 Beban
+                                </span>
+                                <span class="px-3 py-1 inline-flex text-xs leading-4 font-bold rounded-full bg-indigo-100 text-indigo-800 border border-indigo-200 shadow-sm mb-1">
+                                    <i class="far fa-clock mr-1 mt-0.5"></i> 0.0 Jam Pertemuan / Mg
+                                </span>
+                                <div class="w-full min-w-[220px]">
+                                    <div class="text-xs text-gray-400 mt-2 italic text-center">Belum ada agihan tugas</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center admin-col hidden">
+                            <button onclick="openStaffModal(16)" class="text-indigo-600 hover:text-indigo-900 mx-1" title="Edit"><i class="fas fa-edit"></i></button>
+                            <button onclick="deleteStaff(16)" class="text-red-600 hover:text-red-900 mx-1" title="Delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                
+                    <tr class="hover:bg-indigo-50 transition-colors">
+                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">17</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">-</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">Dr. RAIS HANIZAM BIN MADON</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center"><span class="px-2 py-1 inline-flex text-xs leading-4 font-semibold rounded-full bg-green-100 text-green-800">Aktif</span></td>
+                        <td class="px-4 py-4 whitespace-normal text-sm"><span class="text-gray-400">-</span></td>
+                        <td class="px-6 py-4 text-sm text-gray-600 max-w-sm truncate" title="Plant Energy Efficiency">Plant Energy Efficiency</td>
+                        <td class="px-4 py-4 whitespace-normal align-top">
+                            <div class="flex flex-col items-center">
+                                <span class="px-3 py-1 inline-flex text-sm leading-5 font-bold rounded-full border bg-gray-100 text-gray-800 border-gray-200 mb-1 shadow-sm">
+                                    Jumlah: 0 Beban
+                                </span>
+                                <span class="px-3 py-1 inline-flex text-xs leading-4 font-bold rounded-full bg-indigo-100 text-indigo-800 border border-indigo-200 shadow-sm mb-1">
+                                    <i class="far fa-clock mr-1 mt-0.5"></i> 0.0 Jam Pertemuan / Mg
+                                </span>
+                                <div class="w-full min-w-[220px]">
+                                    <div class="text-xs text-gray-400 mt-2 italic text-center">Belum ada agihan tugas</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center admin-col hidden">
+                            <button onclick="openStaffModal(17)" class="text-indigo-600 hover:text-indigo-900 mx-1" title="Edit"><i class="fas fa-edit"></i></button>
+                            <button onclick="deleteStaff(17)" class="text-red-600 hover:text-red-900 mx-1" title="Delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                
+                    <tr class="hover:bg-indigo-50 transition-colors">
+                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">18</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">-</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">DR. ADAM BIN KASANI</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center"><span class="px-2 py-1 inline-flex text-xs leading-4 font-semibold rounded-full bg-green-100 text-green-800">Aktif</span></td>
+                        <td class="px-4 py-4 whitespace-normal text-sm"><span class="text-gray-400">-</span></td>
+                        <td class="px-6 py-4 text-sm text-gray-600 max-w-sm truncate" title="Pressure Vessel Design">Pressure Vessel Design</td>
+                        <td class="px-4 py-4 whitespace-normal align-top">
+                            <div class="flex flex-col items-center">
+                                <span class="px-3 py-1 inline-flex text-sm leading-5 font-bold rounded-full border bg-gray-100 text-gray-800 border-gray-200 mb-1 shadow-sm">
+                                    Jumlah: 0 Beban
+                                </span>
+                                <span class="px-3 py-1 inline-flex text-xs leading-4 font-bold rounded-full bg-indigo-100 text-indigo-800 border border-indigo-200 shadow-sm mb-1">
+                                    <i class="far fa-clock mr-1 mt-0.5"></i> 0.0 Jam Pertemuan / Mg
+                                </span>
+                                <div class="w-full min-w-[220px]">
+                                    <div class="text-xs text-gray-400 mt-2 italic text-center">Belum ada agihan tugas</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center admin-col hidden">
+                            <button onclick="openStaffModal(18)" class="text-indigo-600 hover:text-indigo-900 mx-1" title="Edit"><i class="fas fa-edit"></i></button>
+                            <button onclick="deleteStaff(18)" class="text-red-600 hover:text-red-900 mx-1" title="Delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                
+                    <tr class="hover:bg-indigo-50 transition-colors">
+                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">19</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">-</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">Dr. AHMAD HAFIZAL BIN MOHD YAMIN</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center"><span class="px-2 py-1 inline-flex text-xs leading-4 font-semibold rounded-full bg-green-100 text-green-800">Aktif</span></td>
+                        <td class="px-4 py-4 whitespace-normal text-sm"><span class="text-gray-400">-</span></td>
+                        <td class="px-6 py-4 text-sm text-gray-600 max-w-sm truncate" title="Industrial Training">Industrial Training</td>
+                        <td class="px-4 py-4 whitespace-normal align-top">
+                            <div class="flex flex-col items-center">
+                                <span class="px-3 py-1 inline-flex text-sm leading-5 font-bold rounded-full border bg-gray-100 text-gray-800 border-gray-200 mb-1 shadow-sm">
+                                    Jumlah: 0 Beban
+                                </span>
+                                <span class="px-3 py-1 inline-flex text-xs leading-4 font-bold rounded-full bg-indigo-100 text-indigo-800 border border-indigo-200 shadow-sm mb-1">
+                                    <i class="far fa-clock mr-1 mt-0.5"></i> 0.0 Jam Pertemuan / Mg
+                                </span>
+                                <div class="w-full min-w-[220px]">
+                                    <div class="text-xs text-gray-400 mt-2 italic text-center">Belum ada agihan tugas</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center admin-col hidden">
+                            <button onclick="openStaffModal(19)" class="text-indigo-600 hover:text-indigo-900 mx-1" title="Edit"><i class="fas fa-edit"></i></button>
+                            <button onclick="deleteStaff(19)" class="text-red-600 hover:text-red-900 mx-1" title="Delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                
+                    <tr class="hover:bg-indigo-50 transition-colors">
+                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">20</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">-</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">Dr. MOHD MUSTAQIM BIN TUKIMAN</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center"><span class="px-2 py-1 inline-flex text-xs leading-4 font-semibold rounded-full bg-green-100 text-green-800">Aktif</span></td>
+                        <td class="px-4 py-4 whitespace-normal text-sm"><span class="text-gray-400">-</span></td>
+                        <td class="px-6 py-4 text-sm text-gray-600 max-w-sm truncate" title="Process Thermodynamics">Process Thermodynamics</td>
+                        <td class="px-4 py-4 whitespace-normal align-top">
+                            <div class="flex flex-col items-center">
+                                <span class="px-3 py-1 inline-flex text-sm leading-5 font-bold rounded-full border bg-gray-100 text-gray-800 border-gray-200 mb-1 shadow-sm">
+                                    Jumlah: 0 Beban
+                                </span>
+                                <span class="px-3 py-1 inline-flex text-xs leading-4 font-bold rounded-full bg-indigo-100 text-indigo-800 border border-indigo-200 shadow-sm mb-1">
+                                    <i class="far fa-clock mr-1 mt-0.5"></i> 0.0 Jam Pertemuan / Mg
+                                </span>
+                                <div class="w-full min-w-[220px]">
+                                    <div class="text-xs text-gray-400 mt-2 italic text-center">Belum ada agihan tugas</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap text-center admin-col hidden">
+                            <button onclick="openStaffModal(20)" class="text-indigo-600 hover:text-indigo-900 mx-1" title="Edit"><i class="fas fa-edit"></i></button>
+                            <button onclick="deleteStaff(20)" class="text-red-600 hover:text-red-900 mx-1" title="Delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
                 </table>
             </div>
         </div>
@@ -2244,12 +2744,7 @@
                     <p class="text-sm text-gray-500" data-i18n="t4_desc">Paparan auto-jana berdasarkan agihan di tab sebelumnya.</p>
                 </div>
                 <div class="flex flex-wrap gap-3 items-center">
-                    <select id="reportFilter" onchange="renderPrintView()" class="border border-gray-300 rounded-lg py-2 px-3 text-sm focus:ring-indigo-500 focus:border-indigo-500">
-                    </select>
-                    
-                    <button onclick="exportExcel()" class="inline-flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white shadow-sm text-sm font-medium rounded-lg transition-colors">
-                        <i class="fas fa-file-excel mr-2"></i> <span data-i18n="btn_excel">Muat Turun Excel</span>
-                    </button>
+                    <select id="reportFilter" onchange="renderPrintView()" class="border border-gray-300 rounded-lg py-2 px-3 text-sm focus:ring-indigo-500 focus:border-indigo-500"><option value="ALL">-- Tunjuk Semua Subjek --</option><option value="1">BDJ 12203 - Mathematics for Engineering Technology I</option><option value="2">BDJ 12303 - Mathematics for Engineering Technology II</option><option value="3">BDJ 10903 - Electrical and Electronics Technology</option><option value="4">BDJ 10103 - Engineering Drawing and CAD</option><option value="5">BDJ 10302 - Creativity &amp; Innovation</option><option value="6">BDJ 10602 - Material Science</option><option value="7">BDJ 19101 - Engineering Technology Practice II</option><option value="8">BDJ 10503 - Engineering Laboratory I</option><option value="9">BDJ 20802 - Computer Programming</option><option value="10">BDJ 20103 - Dynamics</option><option value="11">BDJ 27101 - Engineering Laboratory III</option><option value="12">BDJ 20903 - Solid Mechanics</option><option value="13">BDJ 21102 - Solid Modeling</option><option value="14">BDJ 20303 - Mechanics of Machine</option><option value="15">BDF 20303 - Plant Fabrication Technology</option><option value="16">BDF 20403 - Heat Ventilation and Air Conditioning</option><option value="17">BDF 20503 - Plant Operation and Maintenance</option><option value="18">BDJ 30202 - Engineering Technologist And Society</option><option value="19">BDJ 30903 - Occupational Safety &amp; Health</option><option value="20">BDJ 30302 - Plant Eng Tech Practice I</option><option value="21">BDJ 30303 - Process Thermodynamics</option><option value="22">BDJ 30703 - Heat Transfer</option><option value="23">BDJ 37201 - Management and Professional Ethics</option><option value="24">BDJ 31103 - Process Control and Instrumentation</option><option value="25">BDJ 30203 - Mechanical Engineering Design</option><option value="26">BDJ 39003 - Bachelor Degree Project I</option><option value="27">BDF 40103 - Pressure Vessel Design</option><option value="28">BDJ 40203 - Process Technology</option><option value="29">BDJ 40303 - Plant Energy Efficiency</option><option value="30">BDJ 40403 - Process Safety Engineering</option><option value="31">BDJ 49105 - Bachelor Degree Project II</option><option value="32">BDJ 48012 - Industrial Training</option></select>
 
                     <button onclick="window.print()" class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white shadow-sm text-sm font-medium rounded-lg transition-colors">
                         <i class="fas fa-print mr-2"></i> <span data-i18n="btn_print_pdf">Cetak / Simpan PDF</span>
@@ -2274,7 +2769,422 @@
                         </tr>
                     </thead>
                     <tbody id="printListBody">
-                    </tbody>
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">1</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 12203</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Mathematics for Engineering Technology I</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 12303</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Mathematics for Engineering Technology II</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">3</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 10903</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Electrical and Electronics Technology</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">3</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">4</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 10103</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Engineering Drawing and CAD</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">1</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">5</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">5</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 10302</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Creativity &amp; Innovation</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">1</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">6</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 10602</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Material Science</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">7</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 19101</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Engineering Technology Practice II</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">3</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">8</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 10503</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Engineering Laboratory I</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">1</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">4</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">9</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 20802</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Computer Programming</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">1</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">10</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 20103</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Dynamics</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">11</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 27101</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Engineering Laboratory III</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">12</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 20903</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Solid Mechanics</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">13</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 21102</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Solid Modeling</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">1</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">14</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 20303</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Mechanics of Machine</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">15</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDF 20303</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Plant Fabrication Technology</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">16</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDF 20403</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Heat Ventilation and Air Conditioning</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">17</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDF 20503</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Plant Operation and Maintenance</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">3</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">18</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 30202</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Engineering Technologist And Society</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">19</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 30903</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Occupational Safety &amp; Health</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">3</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">20</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 30302</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Plant Eng Tech Practice I</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">1</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">3</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">21</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 30303</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Process Thermodynamics</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">22</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 30703</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Heat Transfer</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">23</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 37201</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Management and Professional Ethics</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">24</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 31103</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Process Control and Instrumentation</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">3</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">25</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 30203</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Mechanical Engineering Design</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">3</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">26</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 39003</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Bachelor Degree Project I</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">9</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">27</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDF 40103</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Pressure Vessel Design</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">3</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">28</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 40203</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Process Technology</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">3</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">29</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 40303</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Plant Energy Efficiency</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">3</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">30</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 40403</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Process Safety Engineering</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">2</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">31</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 49105</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Bachelor Degree Project II</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">15</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="border border-gray-300 px-2 py-1 text-center">32</td>
+                                <td class="border border-gray-300 px-2 py-1 font-semibold text-center">BDJ 48012</td>
+                                <td class="border border-gray-300 px-3 py-1 font-semibold">Industrial Training</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">BDJ</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-3 py-1 text-red-500 font-bold italic">BELUM DIAGIH</td>
+                                <td class="border border-gray-300 px-3 py-1 text-center">-</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                                <td class="border border-gray-300 px-2 py-1 text-center">0</td>
+                            </tr>
+                        </tbody>
                 </table>
             </div>
         </div>
@@ -2282,20 +3192,14 @@
         <!-- ========================================== -->
         <!-- TAB 5: LAPORAN PENSYARAH -->
         <!-- ========================================== -->
-        <div id="tab-laporan-staf" class="tab-content hidden">
+        <div id="tab-laporan-staf" class="tab-content block">
             <div class="mb-6 flex flex-col md:flex-row md:justify-between md:items-center gap-4 no-print">
                 <div>
                     <h2 class="text-2xl font-bold text-gray-900" data-i18n="t5_title">Laporan Agihan Tugas Mengikut Individu</h2>
                     <p class="text-sm text-gray-500" data-i18n="t5_desc">Paparan auto-jana beban pengajaran untuk cetakan staf perseorangan atau keseluruhan jabatan.</p>
                 </div>
                 <div class="flex flex-wrap gap-3 items-center">
-                    <select id="staffReportFilter" onchange="renderStaffReportTab()" class="border border-gray-300 rounded-lg py-2 px-3 text-sm focus:ring-indigo-500 focus:border-indigo-500">
-                        <option value="ALL">-- Tunjuk Semua Pensyarah --</option>
-                    </select>
-
-                    <button onclick="exportExcel()" class="inline-flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white shadow-sm text-sm font-medium rounded-lg transition-colors">
-                        <i class="fas fa-file-excel mr-2"></i> <span data-i18n="btn_excel">Muat Turun Excel</span>
-                    </button>
+                    <select id="staffReportFilter" onchange="renderStaffReportTab()" class="border border-gray-300 rounded-lg py-2 px-3 text-sm focus:ring-indigo-500 focus:border-indigo-500"><option value="ALL">-- Tunjuk Semua Pensyarah --</option><option value="18">DR. ADAM BIN KASANI</option><option value="19">Dr. AHMAD HAFIZAL BIN MOHD YAMIN</option><option value="2">Dr. MOHD FIRDAUS BIN ABAS</option><option value="20">Dr. MOHD MUSTAQIM BIN TUKIMAN</option><option value="10">Dr. MUSTAQIM BIN TUKIMAN</option><option value="7">Dr. NURHAFIZZAH BINTI HASSAN</option><option value="17">Dr. RAIS HANIZAM BIN MADON</option><option value="1">Dr. TAHA SADEQ</option><option value="15">Ir. Ts. Dr. MOHAMAD FARID BIN SIES</option><option value="6">MOHAMED NASRUL BIN MOHAMED HATTA</option><option value="3">PN NOORZEHAN FAZAHIYAH BINTI MD SHAB</option><option value="8">PROF. MADYA Eur Ing. Ir. Ts. Dr. NORAZLIANIE BINTI SAZALI</option><option value="12">PROF. MADYA Ts. Dr. NURHAYATI BINTI ROSLY</option><option value="13">PROF. MADYA Ts. Dr. NURUL FITRIAH BINTI NASIR</option><option value="11">TS. ASHARI BIN KASMIN</option><option value="14">TS. Dr. NORRIZAL BIN MUSTAFFA</option><option value="16">Ts. Dr. NURASYIKIN BINTI MISDAN</option><option value="4">Ts. Dr. SHAIFUL RIZAL BIN MASROL</option><option value="5">Ts. Dr. SITI AIDA BINTI IBRAHIM</option><option value="9">TS. DR. ZULIAZURA BINTI MOHD SALLEH</option></select>
 
                     <button onclick="window.print()" class="inline-flex items-center px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white shadow-sm text-sm font-medium rounded-lg transition-colors">
                         <i class="fas fa-print mr-2"></i> <span data-i18n="btn_print_staff_pdf">Cetak / Simpan PDF</span>
@@ -2320,6 +3224,325 @@
                         </tr>
                     </thead>
                     <tbody id="printStaffListBody">
+                        <tr>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">1</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">BDJ</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 font-semibold align-top bg-gray-50 text-gray-900">Dr. TAHA SADEQ</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center text-gray-400 italic bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 text-red-500 italic font-medium bg-gray-50 print:text-gray-600">BELUM DIAGIH</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-middle bg-gray-50">
+                                <div class="text-xs font-bold text-gray-400 mb-1"><i class="far fa-clock"></i> 0 Jam</div>
+                                <div class="font-bold text-sm text-gray-400 print:text-gray-500">0 Beban</div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">2</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">BDJ</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 font-semibold align-top bg-gray-50 text-gray-900">Dr. MOHD FIRDAUS BIN ABAS</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center text-gray-400 italic bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 text-red-500 italic font-medium bg-gray-50 print:text-gray-600">BELUM DIAGIH</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-middle bg-gray-50">
+                                <div class="text-xs font-bold text-gray-400 mb-1"><i class="far fa-clock"></i> 0 Jam</div>
+                                <div class="font-bold text-sm text-gray-400 print:text-gray-500">0 Beban</div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">3</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">BDJ</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 font-semibold align-top bg-gray-50 text-gray-900">PN NOORZEHAN FAZAHIYAH BINTI MD SHAB</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center text-gray-400 italic bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 text-red-500 italic font-medium bg-gray-50 print:text-gray-600">BELUM DIAGIH</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-middle bg-gray-50">
+                                <div class="text-xs font-bold text-gray-400 mb-1"><i class="far fa-clock"></i> 0 Jam</div>
+                                <div class="font-bold text-sm text-gray-400 print:text-gray-500">0 Beban</div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">4</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">BDJ</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 font-semibold align-top bg-gray-50 text-gray-900">Ts. Dr. SHAIFUL RIZAL BIN MASROL</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center text-gray-400 italic bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 text-red-500 italic font-medium bg-gray-50 print:text-gray-600">BELUM DIAGIH</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-middle bg-gray-50">
+                                <div class="text-xs font-bold text-gray-400 mb-1"><i class="far fa-clock"></i> 0 Jam</div>
+                                <div class="font-bold text-sm text-gray-400 print:text-gray-500">0 Beban</div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">5</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">BDJ</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 font-semibold align-top bg-gray-50 text-gray-900">Ts. Dr. SITI AIDA BINTI IBRAHIM</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center text-gray-400 italic bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 text-red-500 italic font-medium bg-gray-50 print:text-gray-600">BELUM DIAGIH</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-middle bg-gray-50">
+                                <div class="text-xs font-bold text-gray-400 mb-1"><i class="far fa-clock"></i> 0 Jam</div>
+                                <div class="font-bold text-sm text-gray-400 print:text-gray-500">0 Beban</div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">6</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">BDJ</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 font-semibold align-top bg-gray-50 text-gray-900">MOHAMED NASRUL BIN MOHAMED HATTA</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center text-gray-400 italic bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 text-red-500 italic font-medium bg-gray-50 print:text-gray-600">BELUM DIAGIH</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-middle bg-gray-50">
+                                <div class="text-xs font-bold text-gray-400 mb-1"><i class="far fa-clock"></i> 0 Jam</div>
+                                <div class="font-bold text-sm text-gray-400 print:text-gray-500">0 Beban</div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">7</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">BDJ</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 font-semibold align-top bg-gray-50 text-gray-900">Dr. NURHAFIZZAH BINTI HASSAN</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center text-gray-400 italic bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 text-red-500 italic font-medium bg-gray-50 print:text-gray-600">BELUM DIAGIH</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-middle bg-gray-50">
+                                <div class="text-xs font-bold text-gray-400 mb-1"><i class="far fa-clock"></i> 0 Jam</div>
+                                <div class="font-bold text-sm text-gray-400 print:text-gray-500">0 Beban</div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">8</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">BDJ</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 font-semibold align-top bg-gray-50 text-gray-900">PROF. MADYA Eur Ing. Ir. Ts. Dr. NORAZLIANIE BINTI SAZALI</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center text-gray-400 italic bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 text-red-500 italic font-medium bg-gray-50 print:text-gray-600">BELUM DIAGIH</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-middle bg-gray-50">
+                                <div class="text-xs font-bold text-gray-400 mb-1"><i class="far fa-clock"></i> 0 Jam</div>
+                                <div class="font-bold text-sm text-gray-400 print:text-gray-500">0 Beban</div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">9</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">BDJ</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 font-semibold align-top bg-gray-50 text-gray-900">TS. DR. ZULIAZURA BINTI MOHD SALLEH</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center text-gray-400 italic bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 text-red-500 italic font-medium bg-gray-50 print:text-gray-600">BELUM DIAGIH</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-middle bg-gray-50">
+                                <div class="text-xs font-bold text-gray-400 mb-1"><i class="far fa-clock"></i> 0 Jam</div>
+                                <div class="font-bold text-sm text-gray-400 print:text-gray-500">0 Beban</div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">10</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">BDJ</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 font-semibold align-top bg-gray-50 text-gray-900">Dr. MUSTAQIM BIN TUKIMAN</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center text-gray-400 italic bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 text-red-500 italic font-medium bg-gray-50 print:text-gray-600">BELUM DIAGIH</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-middle bg-gray-50">
+                                <div class="text-xs font-bold text-gray-400 mb-1"><i class="far fa-clock"></i> 0 Jam</div>
+                                <div class="font-bold text-sm text-gray-400 print:text-gray-500">0 Beban</div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">11</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">BDJ</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 font-semibold align-top bg-gray-50 text-gray-900">TS. ASHARI BIN KASMIN</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center text-gray-400 italic bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 text-red-500 italic font-medium bg-gray-50 print:text-gray-600">BELUM DIAGIH</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-middle bg-gray-50">
+                                <div class="text-xs font-bold text-gray-400 mb-1"><i class="far fa-clock"></i> 0 Jam</div>
+                                <div class="font-bold text-sm text-gray-400 print:text-gray-500">0 Beban</div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">12</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">BDJ</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 font-semibold align-top bg-gray-50 text-gray-900">PROF. MADYA Ts. Dr. NURHAYATI BINTI ROSLY</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center text-gray-400 italic bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 text-red-500 italic font-medium bg-gray-50 print:text-gray-600">BELUM DIAGIH</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-middle bg-gray-50">
+                                <div class="text-xs font-bold text-gray-400 mb-1"><i class="far fa-clock"></i> 0 Jam</div>
+                                <div class="font-bold text-sm text-gray-400 print:text-gray-500">0 Beban</div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">13</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">BDJ</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 font-semibold align-top bg-gray-50 text-gray-900">PROF. MADYA Ts. Dr. NURUL FITRIAH BINTI NASIR</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center text-gray-400 italic bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 text-red-500 italic font-medium bg-gray-50 print:text-gray-600">BELUM DIAGIH</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-middle bg-gray-50">
+                                <div class="text-xs font-bold text-gray-400 mb-1"><i class="far fa-clock"></i> 0 Jam</div>
+                                <div class="font-bold text-sm text-gray-400 print:text-gray-500">0 Beban</div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">14</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">BDJ</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 font-semibold align-top bg-gray-50 text-gray-900">TS. Dr. NORRIZAL BIN MUSTAFFA</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center text-gray-400 italic bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 text-red-500 italic font-medium bg-gray-50 print:text-gray-600">BELUM DIAGIH</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-middle bg-gray-50">
+                                <div class="text-xs font-bold text-gray-400 mb-1"><i class="far fa-clock"></i> 0 Jam</div>
+                                <div class="font-bold text-sm text-gray-400 print:text-gray-500">0 Beban</div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">15</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">BDJ</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 font-semibold align-top bg-gray-50 text-gray-900">Ir. Ts. Dr. MOHAMAD FARID BIN SIES</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center text-gray-400 italic bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 text-red-500 italic font-medium bg-gray-50 print:text-gray-600">BELUM DIAGIH</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-middle bg-gray-50">
+                                <div class="text-xs font-bold text-gray-400 mb-1"><i class="far fa-clock"></i> 0 Jam</div>
+                                <div class="font-bold text-sm text-gray-400 print:text-gray-500">0 Beban</div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">16</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">BDJ</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 font-semibold align-top bg-gray-50 text-gray-900">Ts. Dr. NURASYIKIN BINTI MISDAN</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center text-gray-400 italic bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 text-red-500 italic font-medium bg-gray-50 print:text-gray-600">BELUM DIAGIH</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-middle bg-gray-50">
+                                <div class="text-xs font-bold text-gray-400 mb-1"><i class="far fa-clock"></i> 0 Jam</div>
+                                <div class="font-bold text-sm text-gray-400 print:text-gray-500">0 Beban</div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">17</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">BDJ</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 font-semibold align-top bg-gray-50 text-gray-900">Dr. RAIS HANIZAM BIN MADON</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center text-gray-400 italic bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 text-red-500 italic font-medium bg-gray-50 print:text-gray-600">BELUM DIAGIH</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-middle bg-gray-50">
+                                <div class="text-xs font-bold text-gray-400 mb-1"><i class="far fa-clock"></i> 0 Jam</div>
+                                <div class="font-bold text-sm text-gray-400 print:text-gray-500">0 Beban</div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">18</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">BDJ</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 font-semibold align-top bg-gray-50 text-gray-900">DR. ADAM BIN KASANI</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center text-gray-400 italic bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 text-red-500 italic font-medium bg-gray-50 print:text-gray-600">BELUM DIAGIH</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-middle bg-gray-50">
+                                <div class="text-xs font-bold text-gray-400 mb-1"><i class="far fa-clock"></i> 0 Jam</div>
+                                <div class="font-bold text-sm text-gray-400 print:text-gray-500">0 Beban</div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">19</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">BDJ</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 font-semibold align-top bg-gray-50 text-gray-900">Dr. AHMAD HAFIZAL BIN MOHD YAMIN</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center text-gray-400 italic bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 text-red-500 italic font-medium bg-gray-50 print:text-gray-600">BELUM DIAGIH</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-middle bg-gray-50">
+                                <div class="text-xs font-bold text-gray-400 mb-1"><i class="far fa-clock"></i> 0 Jam</div>
+                                <div class="font-bold text-sm text-gray-400 print:text-gray-500">0 Beban</div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">20</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">BDJ</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-top bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 font-semibold align-top bg-gray-50 text-gray-900">Dr. MOHD MUSTAQIM BIN TUKIMAN</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center text-gray-400 italic bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-3 py-2 text-red-500 italic font-medium bg-gray-50 print:text-gray-600">BELUM DIAGIH</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center bg-gray-50">-</td>
+                            <td class="border border-gray-300 px-2 py-2 text-center align-middle bg-gray-50">
+                                <div class="text-xs font-bold text-gray-400 mb-1"><i class="far fa-clock"></i> 0 Jam</div>
+                                <div class="font-bold text-sm text-gray-400 print:text-gray-500">0 Beban</div>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -2780,182 +4003,6 @@
             URL.revokeObjectURL(url);
             
             window.showToastMessage("Berjaya Dimuat Turun", "Fail sandaran (backup) JSON telah disimpan di komputer anda.", "fa-file-download");
-        }
-
-        function exportExcel() {
-            try {
-                let laporanData = [];
-                let laporanMerges = [];
-                let lapRowIdx = 1; 
-                let bilSubjek = 1;
-
-                laporanData.push(["Bil", "Jabatan", "Kod Kursus", "Kursus", "Panel", "Seksyen", "Pensyarah / Pengajar", "Penyelaras", "K", "T", "A"]);
-
-                subjectsData.forEach((sub) => {
-                    const contact = getContactHoursObj(sub);
-                    let valK = contact.k, valT = contact.t, valA = contact.a;
-                    const safeCode = (sub.code || "").toString().trim();
-                    const safeName = (sub.name || "").toString();
-                    const deptStr = sub.dept ? sub.dept.trim() : "BDJ";
-
-                    let validAssignments = sub.assigned ? sub.assigned.filter(a => a.staffId !== "" && parseInt(a.sections) > 0) : [];
-                    
-                    if (validAssignments.length === 0) {
-                        laporanData.push([bilSubjek++, deptStr, safeCode, safeName, "BDJ / BDG", "-", "BELUM DIAGIH", "-", valK, valT, valA]);
-                        lapRowIdx++;
-                    } else {
-                        let groupedAssignments = [];
-                        let currentShareGroup = null;
-
-                        validAssignments.forEach(assign => {
-                            const stf = staffData.find(s => s.id == assign.staffId);
-                            const name = stf ? stf.name : "TIDAK JUMPA";
-                            const shareVal = parseInt(assign.share) || 1;
-                            const secVal = parseInt(assign.sections) || 1;
-
-                            if (shareVal > 1) {
-                                if (currentShareGroup && currentShareGroup.names.length < currentShareGroup.expectedShare) {
-                                    currentShareGroup.names.push(name);
-                                    if (currentShareGroup.names.length === currentShareGroup.expectedShare) currentShareGroup = null; 
-                                } else {
-                                    let newGroup = { names: [name], sections: secVal, expectedShare: shareVal };
-                                    groupedAssignments.push(newGroup);
-                                    currentShareGroup = newGroup;
-                                }
-                            } else {
-                                groupedAssignments.push({ names: [name], sections: secVal, expectedShare: 1 });
-                            }
-                        });
-
-                        let currentSecStart = 1;
-                        let processedList = groupedAssignments.map(group => {
-                            let secCount = group.sections;
-                            let secStr = secCount === 1 ? `${currentSecStart}` : `${currentSecStart} - ${currentSecStart + secCount - 1}`;
-                            currentSecStart += secCount;
-                            let nameStr = group.names.join("\nBerkongsi dengan:\n");
-                            return { name: nameStr, secStr: secStr };
-                        });
-
-                        if (processedList.length > 0) {
-                            let penyelaras = groupedAssignments[0].names[0]; 
-                            if (sub.coordinator) {
-                                let coordStaff = staffData.find(s => s.id == sub.coordinator);
-                                if (coordStaff) penyelaras = coordStaff.name;
-                            }
-                            
-                            let startRow = lapRowIdx;
-                            let rowCount = processedList.length;
-
-                            for(let i=0; i < rowCount; i++) {
-                                if (i === 0) {
-                                    laporanData.push([bilSubjek++, deptStr, safeCode, safeName, "BDJ / BDG", processedList[i].secStr, processedList[i].name, penyelaras, valK, valT, valA]);
-                                } else {
-                                    laporanData.push(["", "", "", "", "", processedList[i].secStr, processedList[i].name, "", "", "", ""]);
-                                }
-                                lapRowIdx++;
-                            }
-                            
-                            if (rowCount > 1) {
-                                [0, 1, 2, 3, 4, 7, 8, 9, 10].forEach(col => {
-                                    laporanMerges.push({s: {r: startRow, c: col}, e: {r: startRow + rowCount - 1, c: col}});
-                                });
-                            }
-                        }
-                    }
-                });
-
-                let stafDataArr = [];
-                let stafMerges = [];
-                let stafRowIdx = 1;
-                let bilStaf = 1;
-
-                stafDataArr.push(["Bil", "Jabatan", "No. Staf", "Nama Pensyarah", "Kod Kursus", "Kursus", "Seksyen", "Jam / Mg", "Beban Subjek", "Jumlah Keseluruhan"]);
-
-                const sortedStaff = [...staffData].sort((a, b) => a.name.localeCompare(b.name));
-                
-                sortedStaff.forEach(staff => {
-                    let staffAssignments = [];
-                    subjectsData.forEach(sub => {
-                        sub.assigned.forEach(a => {
-                            if (a.staffId === staff.id && a.sections > 0) {
-                                const multiplier = getLoadMultiplierObj(sub);
-                                const contactData = getContactHoursObj(sub);
-                                const baseKT = (contactData.k + contactData.t) / Math.max(1, a.share);
-                                const baseA = (contactData.a * a.sections) / Math.max(1, a.share);
-                                const hours = baseKT + baseA;
-                                
-                                staffAssignments.push({ code: sub.code, name: sub.name, sections: a.sections, share: a.share, pts: (multiplier * a.sections) / Math.max(1, a.share), hours: hours });
-                            }
-                        });
-                    });
-
-                    let totalLoad = Number(staffAssignments.reduce((sum, item) => sum + item.pts, 0).toFixed(1));
-                    let totalHours = Number(staffAssignments.reduce((sum, item) => sum + item.hours, 0).toFixed(1));
-                    let statusLabel = staff.status === 'Tidak Aktif' ? `[TIDAK AKTIF] ${staff.name}` : staff.name;
-                    let staffDept = staff.dept ? staff.dept.trim() : "BDJ";
-
-                    if (staffAssignments.length === 0) {
-                        let emptyMsg = staff.status === 'Tidak Aktif' ? "TIDAK AKTIF" : "BELUM DIAGIH";
-                        stafDataArr.push([bilStaf++, staffDept, staff.noStaf || "-", statusLabel, "-", emptyMsg, "-", "-", "-", `0 Jam\n0 Beban`]);
-                        stafRowIdx++;
-                    } else {
-                        let startRow = stafRowIdx;
-                        let rowCount = staffAssignments.length;
-                        
-                        for(let i=0; i < rowCount; i++) {
-                            let a = staffAssignments[i];
-                            let secStr = a.sections + (a.share > 1 ? `\n(Kongsi ${a.share})` : "");
-                            
-                            if (i === 0) {
-                                stafDataArr.push([bilStaf++, staffDept, staff.noStaf || "-", statusLabel, a.code, a.name, secStr, a.hours.toFixed(1), a.pts.toFixed(1), `${totalHours} Jam\n${totalLoad} Beban`]);
-                            } else {
-                                stafDataArr.push(["", "", "", "", a.code, a.name, secStr, a.hours.toFixed(1), a.pts.toFixed(1), ""]);
-                            }
-                            stafRowIdx++;
-                        }
-                        
-                        if (rowCount > 1) {
-                            [0, 1, 2, 3, 9].forEach(col => {
-                                stafMerges.push({s: {r: startRow, c: col}, e: {r: startRow + rowCount - 1, c: col}});
-                            });
-                        }
-                    }
-                });
-
-                const exportSubjects = subjectsData.map(sub => {
-                    return { id: sub.id, dept: sub.dept ? sub.dept.trim() : "BDJ", year: sub.year, code: sub.code, name: sub.name, type: sub.type, targetSec: sub.targetSec, k: sub.k, t: sub.t, a: sub.a, assigned: JSON.stringify(sub.assigned) };
-                });
-
-                const exportStaff = staffData.map(staff => {
-                    return { id: staff.id, dept: staff.dept ? staff.dept.trim() : "BDJ", noStaf: staff.noStaf, name: staff.name, status: staff.status, jawatan: staff.jawatan, history: staff.history, note: staff.note };
-                });
-                
-                const exportSession = [{ sessionName: currentSessionName }];
-
-                const wsLapSubjek = XLSX.utils.aoa_to_sheet(laporanData);
-                wsLapSubjek['!merges'] = laporanMerges;
-                wsLapSubjek['!cols'] = [{wch: 5}, {wch: 12}, {wch: 12}, {wch: 40}, {wch: 10}, {wch: 10}, {wch: 40}, {wch: 25}, {wch: 5}, {wch: 5}, {wch: 5}];
-
-                const wsLapStaf = XLSX.utils.aoa_to_sheet(stafDataArr);
-                wsLapStaf['!merges'] = stafMerges;
-                wsLapStaf['!cols'] = [{wch: 5}, {wch: 12}, {wch: 10}, {wch: 35}, {wch: 12}, {wch: 40}, {wch: 10}, {wch: 10}, {wch: 12}, {wch: 15}];
-
-                const wsSubjects = XLSX.utils.json_to_sheet(exportSubjects);
-                const wsStaff = XLSX.utils.json_to_sheet(exportStaff);
-                const wsSession = XLSX.utils.json_to_sheet(exportSession);
-
-                const wb = XLSX.utils.book_new();
-                XLSX.utils.book_append_sheet(wb, wsLapSubjek, "Laporan_Agihan");
-                XLSX.utils.book_append_sheet(wb, wsLapStaf, "Laporan_Staf"); 
-                XLSX.utils.book_append_sheet(wb, wsSubjects, "Data_Subjek"); 
-                XLSX.utils.book_append_sheet(wb, wsStaff, "Data_Staf");
-                XLSX.utils.book_append_sheet(wb, wsSession, "Data_Sesi");
-
-                XLSX.writeFile(wb, "Jadual_Tugas_BDJ_BDG_Gabung_Laporan.xlsx");
-            } catch (err) {
-                console.error(err);
-                alert("Ralat semasa menjana fail Excel / Error generating Excel file.");
-            }
         }
 
         function importData(event) {
